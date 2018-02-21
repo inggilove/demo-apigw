@@ -17,7 +17,7 @@ public class SpeechService {
 	
 	@HystrixCommand(fallbackMethod = "reliableEcho")
 	public String echo() {
-		URI uri = URI.create("http://35.200.40.38:3000/api/echo");
+		URI uri = URI.create("http://35.200.40.38:3000/echo/test");
 		
 		return this.restTemplate.getForObject(uri, String.class);
 	}
