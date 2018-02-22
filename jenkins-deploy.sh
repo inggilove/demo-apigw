@@ -23,8 +23,8 @@ function stop(){
  
 function start(){
     echo " "
-    nohup java -jar $WAR_FILE 1> /dev/null 2>&1
-    echo "java -jar $WAR_FILE 1> /dev/null 2>&1"
+    nohup java -jar $WAR_FILE 1> /dev/null 2>&1 &
+    echo "java -jar $WAR_FILE 1> /dev/null 2>&1 &"
     echo " "
 }
  
