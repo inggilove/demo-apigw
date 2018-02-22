@@ -12,8 +12,7 @@ PROJECT_NAME=$1
 # Ex) 0.0.1-SNAPSHOT
 VERSION_NO=$2
  
-PROJECT_PATH=/var/lib/jenkins/workspace/$PROJECT_NAME/build/libs
-WAR_FILE=$PROJECT_PATH/$PROJECT_NAME-$VERSION_NO.war
+WAR_FILE=./build/libs/$PROJECT_NAME-$VERSION_NO.war
  
 # Function
 function stop(){
@@ -24,8 +23,8 @@ function stop(){
  
 function start(){
     echo " "
-    nohup java -jar $WAR_FILE /tmp 2>> /dev/null >> /dev/null &
-    echo "java -jar $WAR_FILE /tmp 2>> /dev/null >> /dev/null &"
+    nohup java -jar $WAR_FILE 1> /dev/null 2>&1
+    echo "java -jar $WAR_FILE 1> /dev/null 2>&1"
     echo " "
 }
  
