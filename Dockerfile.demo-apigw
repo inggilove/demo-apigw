@@ -3,7 +3,7 @@ FROM frolvlad/alpine-oraclejdk8
 RUN mkdir -p /home/demo-apigw
 WORKDIR /home/demo-apigw
 
-ADD ./demo-apigw /home/demo-apigw
+ADD ./build/libs /home/demo-apigw
 
 EXPOSE 8000
 
