@@ -13,16 +13,16 @@ WAR_FILE=$PROJECT_PATH/$PROJECT_NAME
  
 # Function
 function stop(){
-    sudo echo " "
-    sudo echo "Stoping process on port: $WAR_FILE"
-    sudo echo " "
+    echo " "
+    echo "Stoping process on port: $WAR_FILE"
+    echo " "
 }
  
 function start(){
-    sudo echo " "
-    sudo nohup java -jar $WAR_FILE /tmp 2>> /dev/null >> /dev/null &
-    sudo echo "java -jar $WAR_FILE /tmp 2>> /dev/null >> /dev/null &"
-    sudo echo " "
+    echo " "
+    nohup java -jar $WAR_FILE /tmp 2>> /dev/null >> /dev/null &
+    echo "java -jar $WAR_FILE /tmp 2>> /dev/null >> /dev/null &"
+    echo " "
 }
  
 # Function Call
