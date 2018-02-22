@@ -1,15 +1,19 @@
 #!/bin/bash
 # bash Call
-# sudo bash {PATH}/deploy.sh Build-demo-apigw-0.0.1-SNAPSHOT.war
+# bash {PATH}/jenkins-deploy.sh Build-demo-apigw 0.0.1-SNAPSHOT
  
 # Field
  
-# Service Name
+# Jenkins Project Name
 # Ex) Build-demo-apigw
 PROJECT_NAME=$1
+
+# Version Number
+# Ex) 0.0.1-SNAPSHOT
+VERSION_NO=$2
  
 PROJECT_PATH=/var/lib/jenkins/workspace/$PROJECT_NAME/build/libs
-WAR_FILE=$PROJECT_PATH/$PROJECT_NAME
+WAR_FILE=$PROJECT_PATH/$PROJECT_NAME-$VERSION_NO.war
  
 # Function
 function stop(){
