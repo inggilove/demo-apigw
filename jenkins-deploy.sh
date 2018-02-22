@@ -1,6 +1,7 @@
 #!/bin/bash
 # bash Call
 # bash {PATH}/jenkins-deploy.sh Build-demo-apigw 0.0.1-SNAPSHOT
+# Ex) java -jar ./build/libs/Build-demo-apigw-0.0.1-SNAPSHOT.war
  
 # Field
  
