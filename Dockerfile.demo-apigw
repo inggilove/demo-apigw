@@ -1,0 +1,10 @@
+FROM frolvlad/alpine-oraclejdk8
+
+RUN mkdir -p /home/demo-apigw
+WORKDIR /home/demo-apigw
+
+ADD ./build/libs /home/demo-apigw
+
+EXPOSE 8000
+
+CMD java -jar ./Build-demo-apigw-0.0.1-SNAPSHOT.war
