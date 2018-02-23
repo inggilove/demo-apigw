@@ -1,6 +1,6 @@
 FROM frolvlad/alpine-oraclejdk8
 
-RUN mkdir -p /home/demo-apigw
+RUN mkdir -p /home/demo-apigw/logs
 WORKDIR /home/demo-apigw
 
 ADD ./build/libs /home/demo-apigw
